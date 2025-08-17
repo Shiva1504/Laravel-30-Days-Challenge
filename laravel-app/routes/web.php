@@ -34,3 +34,16 @@ Route::get('/go-to-dashboard', function () {
 
 // 5️⃣ View Route
 Route::view('/about', 'about');
+
+
+use App\Http\Controllers\HelloController;
+
+// Controller route (index method)
+Route::get('/hello-controller', [HelloController::class, 'index']);
+
+// Controller route with parameter
+Route::get('/hello-user/{id}', [HelloController::class, 'showUser']);
+
+use App\Http\Controllers\PostController;
+
+Route::resource('posts', PostController::class);

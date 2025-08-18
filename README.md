@@ -2,7 +2,7 @@
 
 [![Laravel](https://img.shields.io/badge/Laravel-11.x-red?style=for-the-badge&logo=laravel)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.1+-blue?style=for-the-badge&logo=php)](https://www.php.net/)
-![Days Completed](https://img.shields.io/badge/Days_Completed-3/30-green?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days_Completed-4/30-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-In_Progress-orange?style=for-the-badge)
 
 

@@ -47,3 +47,28 @@ Route::get('/hello-user/{id}', [HelloController::class, 'showUser']);
 use App\Http\Controllers\PostController;
 
 Route::resource('posts', PostController::class);
+
+
+
+
+// Example of using the Post model
+use App\Models\Post;
+
+// Create new post
+Route::get('/post/create', function () {
+    $post = Post::create([
+        'title' => 'My First Post',
+        'content' => 'This is content from Day 4.'
+    ]);
+    return $post;
+});
+
+// Get all posts
+Route::get('/posts', function () {
+    return Post::all();
+});
+
+// Find a post by id
+Route::get('/post/{id}', function ($id) {
+    return Post::find($id);
+});

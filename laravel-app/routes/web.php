@@ -72,3 +72,7 @@ Route::get('/posts', function () {
 Route::get('/post/{id}', function ($id) {
     return Post::find($id);
 });
+
+// Laravel Blade Templates to separate layout & content.
+Route::view('/home', 'home');
+Route::view('/about', 'about');

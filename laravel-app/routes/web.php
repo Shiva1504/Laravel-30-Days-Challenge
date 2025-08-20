@@ -76,3 +76,6 @@ Route::get('/post/{id}', function ($id) {
 // Laravel Blade Templates to separate layout & content.
 Route::view('/home', 'home');
 Route::view('/about', 'about');
+
+// Example of using a view for users (Day 6)
+Route::view('/users', 'users');

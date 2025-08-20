@@ -2,7 +2,7 @@
 
 [![Laravel](https://img.shields.io/badge/Laravel-11.x-red?style=for-the-badge&logo=laravel)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.1+-blue?style=for-the-badge&logo=php)](https://www.php.net/)
-![Days Completed](https://img.shields.io/badge/Days_Completed-5/30-green?style=for-the-badge)
+![Days Completed](https://img.shields.io/badge/Days_Completed-6/30-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-In_Progress-orange?style=for-the-badge)
 
 
@@ -14,38 +14,38 @@ This repo will contain **daily notes, code examples, and tasks** for each day.
 
 ## 📅 Challenge Roadmap
 
-| Day | Topic |
-|-----|-------|
-| 01 | Introduction & Setup |
-| 02 | Routing Basics |
-| 03 | Controllers |
-| 04 | Blade Basics |
-| 05 | Models & Eloquent ORM |
-| 06 | Database Migrations |
-| 07 | Eloquent CRUD |
-| 08 | Forms & Validation |
-| 09 | Request Lifecycle |
-| 10 | Middleware |
-| 11 | Authentication Basics |
-| 12 | Authorization |
-| 13 | File Uploads |
-| 14 | Relationships 1 |
-| 15 | Relationships 2 |
-| 16 | Pagination |
-| 17 | API Development 1 |
-| 18 | API Development 2 |
-| 19 | Laravel Collections |
-| 20 | Query Scopes |
-| 21 | Laravel Events |
-| 22 | Laravel Queues & Jobs |
-| 23 | Scheduling Tasks |
-| 24 | Laravel Mail |
-| 25 | Laravel Notifications |
-| 26 | Service Container |
-| 27 | Service Providers |
-| 28 | Testing Basics |
-| 29 | Deploying Laravel |
-| 30 | Final Project |
+## 📅 Progress
+
+- **Day 01** : Introduction & Setup  
+- **Day 02** : Routing examples with about view and updated docs  
+- **Day 03** : Controllers (basic + resource) with routes  
+- **Day 04** : Models & Database Basics with Eloquent examples  
+- **Day 05** : Blade Templating Basics with layout & child views  
+- **Day 06** : Blade Directives  
+- **Day 07** : Eloquent CRUD  
+- **Day 08** : Forms & Validation  
+- **Day 09** : Request Lifecycle  
+- **Day 10** : Middleware  
+- **Day 11** : Authentication Basics  
+- **Day 12** : Authorization  
+- **Day 13** : File Uploads  
+- **Day 14** : Relationships (One-to-One, One-to-Many)  
+- **Day 15** : Relationships (Many-to-Many, Polymorphic)  
+- **Day 16** : Pagination  
+- **Day 17** : API Development (Part 1 – Basics, Routes, Resources)  
+- **Day 18** : API Development (Part 2 – Authentication, Sanctum)  
+- **Day 19** : Laravel Collections Deep Dive  
+- **Day 20** : Query Scopes  
+- **Day 21** : Laravel Events  
+- **Day 22** : Laravel Queues & Jobs  
+- **Day 23** : Scheduling Tasks  
+- **Day 24** : Laravel Mail  
+- **Day 25** : Laravel Notifications  
+- **Day 26** : Service Container  
+- **Day 27** : Service Providers  
+- **Day 28** : Testing Basics  
+- **Day 29** : Deploying Laravel  
+- **Day 30** : Final Project – Bringing It All Together  
 
 ---
 

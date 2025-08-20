@@ -1,71 +1,80 @@
-# Day 5: Blade Templating Basics
+# Day 4: Models & Database Basics
 
-Today we explored **Laravel Blade Templates** to separate layout & content.
+Today we learned about **Models, Migrations, and Eloquent ORM** in Laravel.
 
 ---
 
-## 🔹 Step 1: Create a Layout
-`resources/views/layouts/app.blade.php`
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Laravel 30 Days - @yield('title')</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-</head>
-<body class="container mt-5">
-    <h1 class="mb-4">Laravel 30 Days</h1>
-
-    <div class="card p-4">
-        @yield('content')
-    </div>
-</body>
-</html>
+## 🔹 Step 1: Create a Model with Migration
+```bash
+php artisan make:model Post -m
 ```
 
-## 🔹 Step 2: Create Child Views
 
-### Home View
-resources/views/home.blade.php
-```html
-@extends('layouts.app')
+This creates:
 
-@section('title', 'Home')
+app/Models/Post.php
+database/migrations/xxxx_xx_xx_create_posts_table.php
 
-@section('content')
-    <h2>Welcome to Day 5</h2>
-    <p>This is the home page using Blade template inheritance.</p>
-@endsection
-```
 
-### About View
-resources/views/about.blade.php
-```html
-@extends('layouts.app')
-
-@section('title', 'About')
-
-@section('content')
-    <h2>About Us</h2>
-    <p>This page is rendered using Blade templating system.</p>
-@endsection
-```
-
-## 🔹 Step 3: Add Routes
-routes/web.php
+## 🔹 Step 2: Define Database Table
+Edit the migration file:
 ```php
-Route::view('/home', 'home');
-Route::view('/about', 'about');
+public function up(): void
+{
+    Schema::create('posts', function (Blueprint $table) {
+        $table->id();
+        $table->string('title');
+        $table->text('content');
+        $table->timestamps();
+    });
+}
 ```
 
-## 🔹 Step 4: Blade Features
-@extends('layouts.app') → Reuse layout
-@section('title') → Set page title
-@yield('content') → Insert unique content
-@if, @foreach, @include → Control structures (we’ll use later)
+Run migration:
+```php
+php artisan migrate
+```
+
+## 🔹 Step 3: Configure Model
+In app/Models/Post.php, allow mass assignment:
+```php
+protected $fillable = ['title', 'content'];
+```
+
+## 🔹 Step 4: Add Routes for Testing
+In routes/web.php:
+```php
+use App\Models\Post;
+
+// Create new post
+Route::get('/post/create', function () {
+    $post = Post::create([
+        'title' => 'My First Post',
+        'content' => 'This is content from Day 4.'
+    ]);
+    return $post;
+});
+
+// Get all posts
+Route::get('/posts', function () {
+    return Post::all();
+});
+
+// Find a post by id
+Route::get('/post/{id}', function ($id) {
+    return Post::find($id);
+});
+
+```
+
+
+## 🔹 Output
+/post/create → Creates a new post
+/posts → Shows all posts
+/post/{id} → Shows a single post
+
 
 ## ✅ What We Learned
-Create a base layout with Blade.
-Use @extends, @section, @yield for clean templates.
-Reuse layouts across multiple views.
+How to create Models
+How to use Migrations
+Basics of Eloquent ORM

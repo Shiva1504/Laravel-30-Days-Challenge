@@ -79,3 +79,9 @@ Route::view('/about', 'about');
 
 // Example of using a view for users (Day 6)
 Route::view('/users', 'users');
+
+
+// Day 7 - Eloquent CRUD with Product model, controller, and routes
+use App\Http\Controllers\ProductController;
+
+Route::resource('products', ProductController::class);

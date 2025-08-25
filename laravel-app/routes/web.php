@@ -90,3 +90,10 @@ Route::resource('products', ProductController::class);
 // Day 8 - Form Validation with Post model and controller
 
 Route::resource('posts', PostController::class);
+
+
+// Day - 10 - Middleware to restrict access to admin routes
+
+Route::get('/admin', function () {
+    return "Welcome Admin!";
+})->middleware('admin');
